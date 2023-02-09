@@ -1,10 +1,14 @@
 import React from "react";
 
-function SearchBar() {
+function SearchBar({ setSearch }) {
   return (
     <div className="search">
-      <input type="text" className="searchTerm" />
-      {/* For the advanced deliverables: add a checkbox to allow sorting the planeteer */}
+      <input
+        id="search"
+        type="text"
+        className="searchTerm"
+        onChange={(event) => setSearch(event.target.value)}
+      />
     </div>
   );
 }
